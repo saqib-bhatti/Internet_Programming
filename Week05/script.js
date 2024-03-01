@@ -24,7 +24,7 @@
 //         circleOpacity = parseFloat(element.style.opacity)
 //         element.style.opacity = circleOpacity + 0.1
 //         // element.style.opacity = 1
-    
+
 //     }
 // function onLoad() {
 //     var element = document.getElementById('circle');
@@ -34,19 +34,39 @@
 
 // document.addEventListener('DOMContentLoaded', onLoad);  
 
+// function decreaseOpacity() {
+//             // window.alert("The button was pressed");
+//             var element = document.getElementById('circle');
+//             circleOpacity = parseFloat(element.style.opacity)
+//             element.style.opacity = circleOpacity - 0.1
+//             // element.style.opacity = 1
+
+//         }
+
+//     function onLoad() {
+//         var element = document.getElementById('circle');
+//         element.style.opacity = 1
+//         element.addEventListener('click', decreaseOpacity);
+//     }
+
+//     document.addEventListener('DOMContentLoaded', onLoad);  
+
+
+// Exercise #06
+function decreaseOpacityByInterval() {
+    // window.alert("The button was pressed");
+    var element = document.getElementById('circle');
+    circleOpacity = parseFloat(element.style.opacity)
+    element.style.opacity = circleOpacity - 0.01
+}
 function decreaseOpacity() {
-            // window.alert("The button was pressed");
-            var element = document.getElementById('circle');
-            circleOpacity = parseFloat(element.style.opacity)
-            element.style.opacity = circleOpacity - 0.1
-            // element.style.opacity = 1
-        
-        }
-    
-    function onLoad() {
-        var element = document.getElementById('circle');
-        element.style.opacity = 1
-        element.addEventListener('click', decreaseOpacity);
-    }
-    
-    document.addEventListener('DOMContentLoaded', onLoad);  
+    setInterval(decreaseOpacityByInterval, 100)
+}
+
+function onLoad() {
+    var element = document.getElementById('circle');
+    element.style.opacity = 1
+    element.addEventListener('click', decreaseOpacity);
+}
+
+document.addEventListener('DOMContentLoaded', onLoad);  
